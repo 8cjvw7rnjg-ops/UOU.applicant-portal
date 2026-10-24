@@ -1,0 +1,393 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<header class="MuiPaper-root MuiPaper-elevation MuiPaper-elevation4 MuiAppBar-root tss-ltr-iuyu1u-EdsHeaderBar-root-Header-root MuiAppBar-colorPrimary MuiAppBar-positionStatic tss-ltr-4nmzme-EdsHeaderBar-positionStatic themed eds-ltr-16bgk84"><!-- FULL-WIDTH TOP LOGO -->
+<div class="top-logo">
+    <img src="uu-logo.png" alt="University Logo">
+</div>
+
+<style>
+html,
+body {
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow-x: hidden !important;
+}
+
+.top-logo {
+    display: block !important;
+    width: 100vw !important;
+    max-width: none !important;
+
+    margin-left: calc(50% - 50vw) !important;
+    padding: 0 !important;
+
+    overflow: hidden !important;
+    line-height: 0 !important;
+    box-sizing: border-box !important;
+}
+
+.top-logo img {
+    display: block !important;
+    width: 100% !important;
+    max-width: none !important;
+    height: auto !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+    border: 0 !important;
+
+    object-fit: fill !important;
+    object-position: center !important;
+}
+
+/* LANDSCAPE ONLY */
+@media (orientation: landscape) {
+    .top-logo {
+        width: 100vw !important;
+        height: auto !important;
+        max-width: none !important;
+        margin-left: calc(50% - 50vw) !important;
+        padding: 0 !important;
+        overflow: visible !important;
+        box-sizing: border-box !important;
+    }
+
+    .top-logo img {
+        display: block !important;
+        width: 100vw !important;
+        height: auto !important;
+        max-width: none !important;
+        object-fit: contain !important;
+        object-position: center !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+}
+</style></div></div><div class="tss-ltr-b3eutc-EdsHeaderBar-menuBar menu-bar"></div></div></nav></header>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Available Application Forms</title>
+
+<style>
+/* PAGE */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: #f7f7f7;
+    color: #171717;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* PAGE HEADING */
+.page-heading {
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin: 0;
+    padding: 48px 6.4% 44px;
+    letter-spacing: -0.6px;
+}
+
+/* MAIN WHITE CARD */
+.application-container {
+    width: calc(100% - 13%);
+    max-width: 850px;
+    margin: 0 auto 60px;
+    padding: 68px 9.2% 65px;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.18);
+}
+
+/* INDIVIDUAL APPLICATIONS */
+.application-section {
+    width: 100%;
+}
+
+.application-title {
+    margin: 0 0 60px;
+    font-size: 27px;
+    line-height: 1.9;
+    font-weight: 700;
+    letter-spacing: 0.2px;
+}
+
+.application-description {
+    margin: 0 0 40px;
+    font-size: 22px;
+    line-height: 1.55;
+    font-weight: 400;
+}
+
+/* PROGRAMME LIST */
+.programme-list {
+    margin: 0 0 52px;
+    padding-left: 39px;
+    font-size: 22px;
+    line-height: 1.55;
+}
+
+.programme-list li {
+    padding-left: 5px;
+    margin-bottom: 0;
+}
+
+.programme-list li::marker {
+    font-size: 20px;
+}
+
+/* START BUTTON */
+.start-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 89px;
+    padding: 18px 12px;
+    border: 2px solid #0878df;
+    border-radius: 9px;
+    background: #ffffff;
+    color: #0870cc;
+    text-decoration: none;
+    text-align: center;
+    font-size: 25px;
+    line-height: 1.2;
+    font-weight: 700;
+    letter-spacing: 2px;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.start-button:active {
+    background: #edf6ff;
+}
+
+/* DIVIDER BETWEEN FORMS */
+.application-divider {
+    border: 0;
+    border-top: 2px solid #bcbec2;
+    margin: 35px 0 32px;
+}
+
+/* SECOND APPLICATION */
+.internal-title {
+    margin: 0 0 56px;
+    font-size: 27px;
+    line-height: 1.9;
+    font-weight: 700;
+    letter-spacing: 0.2px;
+}
+
+.internal-description {
+    margin: 0 0 54px;
+    font-size: 22px;
+    line-height: 1.5;
+}
+
+/* RESPONSIVE IPHONE LAYOUT */
+@media screen and (max-width: 600px) {
+    .page-heading {
+        font-size: 30px;
+        padding: 48px 6.4% 44px;
+    }
+
+    .application-container {
+        width: calc(100% - 13%);
+        padding: 68px 9.2% 65px;
+        margin-bottom: 60px;
+    }
+
+    .application-title,
+    .internal-title {
+        font-size: 27px;
+        line-height: 1.9;
+    }
+
+    .application-description,
+    .internal-description,
+    .programme-list {
+        font-size: 22px;
+    }
+
+    .start-button {
+        min-height: 89px;
+        font-size: 25px;
+    }
+}
+
+/* SMALLER PHONES */
+@media screen and (max-width: 380px) {
+    .page-heading {
+        font-size: 27px;
+    }
+
+    .application-container {
+        padding-left: 8%;
+        padding-right: 8%;
+    }
+
+    .application-title,
+    .internal-title {
+        font-size: 25px;
+    }
+
+    .application-description,
+    .internal-description,
+    .programme-list {
+        font-size: 20px;
+    }
+
+    .start-button {
+        font-size: 23px;
+        min-height: 76px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<h1 class="page-heading">
+    Available Application Forms
+</h1>
+
+<main class="application-container">
+
+    <!-- APPLICATION FORM V2 -->
+    <section class="application-section">
+
+        <h2 class="application-title">
+            Ulster University Application Form v2
+        </h2>
+
+        <p class="application-description">
+            Use this form to apply for:
+        </p>
+
+        <ul class="programme-list">
+            <li>Part-time undergraduate programmes</li>
+            <li>Postgraduate taught programmes</li>
+            <li>College of Medicine &amp; Dentistry programmes</li>
+            <li>Exchange/Study Abroad programme</li>
+            <li>Short Courses - Professional Development (Micro-credentials)</li>
+        </ul>
+
+        <a
+            class="start-button"
+            href="new-application.html"
+        >START</a>
+
+    </section>
+
+    <hr class="application-divider">
+
+    <!-- INTERNAL APPLICATION FORM V1 -->
+    <section class="application-section">
+
+        <h2 class="internal-title">
+            Ulster University Application Form_v1
+        </h2>
+
+        <p class="internal-description">
+            UU Internal Use only
+        </p>
+
+        <a
+            class="start-button"
+            href="YOUR_FORM_V1_URL"
+        >START</a>
+
+    </section>
+
+</main>
+
+</body>
+</html>
+<div class="MuiCardContent-root tss-ltr-3mktr-EdsCardContent-root hedtech-reset-spacing tss-ltr-19d7rrz-ApplicationCard-applicationCardContainer eds-ltr-1qw96cp"><canvas class="tss-ltr-14pnqum-ApplicationCard-confetti"></canvas><div class="tss-ltr-1ccdtcb-ApplicationCard-completedContainer applicant-privacy-notice">
+<div class="applicant-privacy-divider"></div>
+<p>
+    The information you provide will be processed in accordance with the
+    <a target="_blank"
+       rel="noopener noreferrer"
+       href="https://www.ulster.ac.uk/about/governance/compliance/gdpr">
+        Student Privacy Notice
+    </a>.
+</p>
+<p>
+    Ellucian is our technology partner for processing applications.
+</p>
+</div>
+<style>
+/* PRIVACY NOTICE CONTAINER */
+.applicant-privacy-notice {
+    width: 100% !important;
+    box-sizing: border-box !important;
+    padding: 0 20px 16px 20px !important;
+    margin: 0 auto !important;
+    font-family: Arial, Helvetica, sans-serif !important;
+    font-size: 16px !important;
+    line-height: 1.6 !important;
+    color: #333333 !important;
+    text-align: center !important;
+}
+/* LIGHT BLUE DIVIDER */
+.applicant-privacy-divider {
+    width: 100% !important;
+    max-width: 700px !important;
+    height: 2px !important;
+    background-color: #b9dff2 !important;
+    margin: 0 auto 18px auto !important;
+}
+/* SEPARATE CENTRED PARAGRAPHS */
+.applicant-privacy-notice p {
+    display: block !important;
+    width: 100% !important;
+    margin: 0 auto 12px auto !important;
+    padding: 0 !important;
+    font-family: Arial, Helvetica, sans-serif !important;
+    font-size: 16px !important;
+    line-height: 1.6 !important;
+    font-weight: 400 !important;
+    text-align: center !important;
+    color: #333333 !important;
+}
+/* PRIVACY NOTICE LINK */
+.applicant-privacy-notice a {
+    color: #176b96 !important;
+    text-decoration: underline !important;
+    font-size: inherit !important;
+}
+/* PHONE PORTRAIT */
+@media (max-width: 600px) and (orientation: portrait) {
+    .applicant-privacy-notice {
+        padding: 0 14px 14px 14px !important;
+        font-size: 15px !important;
+    }
+    .applicant-privacy-notice p {
+        font-size: 15px !important;
+        line-height: 1.6 !important;
+    }
+    .applicant-privacy-divider {
+        margin-bottom: 16px !important;
+    }
+}
+/* LANDSCAPE AND LAPTOP — SAME SETTINGS */
+@media (max-width: 900px) and (orientation: landscape),
+       (min-width: 901px) {
+    .applicant-privacy-notice {
+        font-size: 17px !important;
+    }
+    .applicant-privacy-notice p {
+        font-size: 17px !important;
+    }
+}
+</style>

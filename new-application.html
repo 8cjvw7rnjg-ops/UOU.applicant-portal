@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Apply to Ulster University</title>
+
+    <style>
+        /* RESET */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f5f5f5;
+            color: #191919;
+            line-height: 1.6;
+            font-size: 17px;
+        }
+
+        /* UNIVERSITY HEADER */
+        .header {
+            background: #1d4363;
+            color: white;
+            height: 115px;
+            display: flex;
+            align-items: center;
+            padding: 20px 8%;
+            border-bottom: 8px solid #a4b4b5;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo-symbol {
+            font-family: Georgia, serif;
+            font-size: 76px;
+            font-weight: bold;
+            line-height: 1;
+        }
+
+        .logo-text {
+            font-size: 18px;
+            font-weight: bold;
+            line-height: 1.05;
+        }
+
+        /* NAVIGATION */
+        .navigation {
+            background: white;
+            margin: 22px auto 35px;
+            width: calc(100% - 36px);
+            max-width: 950px;
+            border-radius: 9px;
+            box-shadow: 0 3px 12px #00000015;
+            overflow: hidden;
+        }
+
+        .nav-home {
+            padding: 20px 25px;
+            color: #0873ce;
+            font-size: 20px;
+            font-weight: bold;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .nav-apply {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 18px 25px;
+            font-size: 19px;
+        }
+
+        .nav-apply span:last-child {
+            font-size: 25px;
+        }
+
+        /* MAIN CONTENT */
+        .container {
+            max-width: 950px;
+            width: calc(100% - 36px);
+            margin: 0 auto 120px;
+            background: white;
+            border-radius: 9px;
+            box-shadow: 0 3px 12px #00000012;
+            padding: 45px 32px;
+        }
+
+        h1 {
+            font-size: 38px;
+            line-height: 1.35;
+            margin-bottom: 30px;
+            font-weight: 700;
+        }
+
+        h2 {
+            font-size: 23px;
+            margin-top: 32px;
+            margin-bottom: 12px;
+        }
+
+        p {
+            margin-bottom: 22px;
+        }
+
+        ul {
+            padding-left: 38px;
+            margin: 20px 0 28px;
+        }
+
+        li {
+            padding-left: 5px;
+            margin-bottom: 5px;
+        }
+
+        .section-title {
+            font-size: 22px;
+            font-weight: bold;
+            margin-top: 35px;
+            margin-bottom: 18px;
+        }
+
+        a {
+            color: #0000ee;
+            text-decoration: underline;
+            overflow-wrap: anywhere;
+        }
+
+        .help-section {
+            margin-top: 35px;
+        }
+
+        .help-section p {
+            margin-bottom: 30px;
+        }
+
+        /* CONTINUE BAR */
+        .bottom-bar {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            min-height: 85px;
+            background: #fff;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            padding: 15px 8%;
+            border-top: 1px solid #eee;
+            z-index: 100;
+        }
+
+        .continue-button {
+            border: none;
+            background: transparent;
+            color: #0072ce;
+            font-size: 21px;
+            font-weight: bold;
+            letter-spacing: 1.5px;
+            padding: 12px 5px;
+            cursor: pointer;
+        }
+
+        .continue-button:active {
+            opacity: 0.6;
+        }
+
+        /* NEXT STEP */
+        .next-step {
+            display: none;
+            max-width: 950px;
+            width: calc(100% - 36px);
+            margin: 0 auto 130px;
+            padding: 35px 25px;
+            background: white;
+            border-radius: 9px;
+            box-shadow: 0 3px 12px #00000012;
+        }
+
+        .next-step h2 {
+            margin-top: 0;
+        }
+
+        .next-step select {
+            display: block;
+            width: 100%;
+            padding: 14px;
+            margin: 15px 0;
+            font-size: 16px;
+            border: 1px solid #aaa;
+            border-radius: 5px;
+            background: white;
+        }
+
+        .next-step button {
+            background: #0072ce;
+            color: white;
+            border: none;
+            padding: 13px 22px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        /* MOBILE RESPONSIVE */
+        @media (max-width: 600px) {
+            body {
+                font-size: 17px;
+            }
+
+            .header {
+                height: 142px;
+                padding: 20px 9%;
+            }
+
+            .logo-symbol {
+                font-size: 76px;
+            }
+
+            .logo-text {
+                font-size: 17px;
+            }
+
+            .navigation {
+                margin-top: 18px;
+                margin-bottom: 55px;
+            }
+
+            .nav-home {
+                padding: 20px 25px;
+                font-size: 19px;
+            }
+
+            .nav-apply {
+                padding: 18px 25px;
+                font-size: 19px;
+            }
+
+            .container {
+                padding: 120px 32px 40px;
+                margin-bottom: 115px;
+            }
+
+            h1 {
+                font-size: 38px;
+                line-height: 1.4;
+                margin-bottom: 45px;
+            }
+
+            h2 {
+                font-size: 22px;
+            }
+
+            ul {
+                padding-left: 38px;
+            }
+
+            .section-title {
+                font-size: 22px;
+            }
+
+            .bottom-bar {
+                min-height: 115px;
+                padding: 15px 8%;
+            }
+
+            .continue-button {
+                font-size: 21px;
+            }
+        }
+
+        @media (min-width: 601px) {
+            .container {
+                padding: 55px 65px;
+            }
+
+            h1 {
+                font-size: 42px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="MuiPaper-root MuiPaper-elevation MuiPaper-elevation4 MuiAppBar-root tss-ltr-iuyu1u-EdsHeaderBar-root-Header-root MuiAppBar-colorPrimary MuiAppBar-positionStatic tss-ltr-4nmzme-EdsHeaderBar-positionStatic themed eds-ltr-16bgk84"><nav><div class="MuiToolbar-root tss-ltr-1mya9vm-EdsHeaderBar-headerBarToolbar MuiToolbar-regular eds-ltr-dtbpk7"><div class="headerbar-logo tss-ltr-1l44d7s-EdsHeaderBar-logoRoot-Header-headerBarLogoRoot"><div class="tss-ltr-mzkn0s-EdsHeaderBarLogo-root-Header-headerBarLogoRoot"><!-- FULL-WIDTH TOP LOGO -->
+<div class="top-logo">
+    <img src="uu-logo.png" alt="University Logo">
+</div>
+
+<style>
+html,
+body {
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow-x: hidden !important;
+}
+
+.top-logo {
+    display: block !important;
+    width: 100vw !important;
+    max-width: none !important;
+
+    margin-left: calc(50% - 50vw) !important;
+    padding: 0 !important;
+
+    overflow: hidden !important;
+    line-height: 0 !important;
+    box-sizing: border-box !important;
+}
+
+.top-logo img {
+    display: block !important;
+    width: 100% !important;
+    max-width: none !important;
+    height: auto !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+    border: 0 !important;
+
+    object-fit: fill !important;
+    object-position: center !important;
+}
+
+/* LANDSCAPE ONLY */
+@media (orientation: landscape) {
+    .top-logo {
+        width: 100vw !important;
+        height: auto !important;
+        max-width: none !important;
+        margin-left: calc(50% - 50vw) !important;
+        padding: 0 !important;
+        overflow: visible !important;
+        box-sizing: border-box !important;
+    }
+
+    .top-logo img {
+        display: block !important;
+        width: 100vw !important;
+        height: auto !important;
+        max-width: none !important;
+        object-fit: contain !important;
+        object-position: center !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+}
+</style></div></div><div class="tss-ltr-b3eutc-EdsHeaderBar-menuBar menu-bar"></div></div></nav></header><div class="tss-ltr-1bln2r8-appapplicant-content embedded"></div><div class="tss-ltr-dw224s-ApplicationForm-root mobile"><div></div><div class="tss-ltr-1a3tfjb-ApplicationForm-titleContainer"><div class="tss-ltr-c5goxh-ApplicationForm-mobilePanel"><div class="tss-ltr-1k7of47-ApplicationForm-mobileHomeRow" role="link" tabindex="0"><!-- APPLICATIONS HOME BUTTONS -->
+<div class="applications-home-container">
+    <!-- TOP BUTTON: APPLICATIONS HOME -->
+    <button
+        type="button"
+        class="applications-home-button applications-home-primary"
+        onclick="window.location.href='index.html';"
+    >
+        <svg role="presentation" class="ds-icon ds-home">
+            <use xlink:href="#ds-icon-home"></use>
+        </svg>
+        <span>Applications Home</span>
+    </button>
+    <!-- LIGHT GREY DIVIDER -->
+    <div class="applications-home-divider"></div>
+    <!-- BOTTOM BUTTON: VIEW APPLICATIONS -->
+    <button
+        type="button"
+        class="applications-home-button applications-home-secondary"
+        onclick="window.location.href='view.html';"
+    >
+        <svg role="presentation" class="ds-icon ds-edit">
+            <use xlink:href="#ds-icon-edit"></use>
+        </svg>
+        <span>Apply to Ulster University</span>
+    </button>
+</div>
+<style>
+/* APPLICATION CARD BORDER */
+.applications-home-container {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 0 !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+    background: #ffffff !important;
+    border: 1px solid #cccccc !important;
+    border-radius: 18px !important;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.22) !important;
+    padding: 4px !important;
+    margin: 0 !important;
+    overflow: hidden !important;
+}
+/* BOTH BUTTONS */
+.applications-home-button {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    gap: 10px !important;
+    width: 100% !important;
+    height: 44px !important;
+    min-height: 44px !important;
+    padding: 10px 12px !important;
+    margin: 0 !important;
+    background: transparent !important;
+    border: none !important;
+    border-radius: 2px !important;
+    box-shadow: none !important;
+    font-family: inherit !important;
+    font-size: 14px !important;
+    line-height: 20px !important;
+    font-weight: 700 !important;
+    text-align: left !important;
+    cursor: pointer !important;
+    box-sizing: border-box !important;
+}
+/* TOP BUTTON: STRONG BLUE */
+.applications-home-primary,
+.applications-home-primary span,
+.applications-home-primary .ds-icon {
+    color: #0084FF !important;
+}
+/* TOP BUTTON ICON */
+.applications-home-primary .ds-icon {
+    fill: #0084FF !important;
+}
+/* BOTTOM BUTTON: ORIGINAL COLOUR */
+.applications-home-secondary {
+    color: inherit !important;
+}
+.applications-home-secondary span {
+    color: inherit !important;
+    font-weight: 700 !important;
+}
+.applications-home-secondary .ds-icon {
+    color: inherit !important;
+    fill: currentColor !important;
+}
+/* ICON SIZING */
+.applications-home-button .ds-icon {
+    display: block !important;
+    width: 18px !important;
+    height: 18px !important;
+    min-width: 18px !important;
+    min-height: 18px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    flex-shrink: 0 !important;
+}
+/* BOTH BUTTON NAMES */
+.applications-home-button span {
+    display: block !important;
+    font-size: 14px !important;
+    line-height: 20px !important;
+    font-weight: 700 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    white-space: nowrap !important;
+}
+/* LIGHT GREY DIVIDER */
+.applications-home-divider {
+    display: block !important;
+    width: 100% !important;
+    height: 1px !important;
+    min-height: 1px !important;
+    background: #e0e0e0 !important;
+    border: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+/* TOP BUTTON HOVER */
+.applications-home-primary:hover {
+    background: #e5f2ff !important;
+}
+/* BOTTOM BUTTON HOVER */
+.applications-home-secondary:hover {
+    background: #f2f2f2 !important;
+}
+/* KEYBOARD ACCESS */
+.applications-home-button:focus-visible {
+    outline: 2px solid #0084FF !important;
+    outline-offset: -2px !important;
+}
+</style></div>
+    <!-- MAIN INFORMATION PAGE -->
+    <main class="container" id="mainContent">
+
+        <h1>Apply to Ulster University</h1>
+
+        <p>
+            Use this online Application Form to apply for:
+        </p>
+
+        <ul>
+            <li>Part-time undergraduate programmes</li>
+            <li>Degree Apprenticeship programmes</li>
+            <li>Postgraduate taught programmes</li>
+            <li>College of Medicine &amp; Dentistry programmes</li>
+            <li>Exchange/Study Abroad programme</li>
+            <li>
+                Short Courses - Postgraduate and Undergraduate
+                Professional Development (Micro-credentials)
+            </li>
+        </ul>
+
+        <p>
+            After creating an account, you can return at any
+            time to review or update your application before
+            submitting.
+        </p>
+
+        <h2>Before You Start</h2>
+
+        <p>
+            Please make sure you are using the correct
+            application route.
+        </p>
+
+        <div class="section-title">
+            Apply through UCAS if you are:
+        </div>
+
+        <ul>
+            <li>An applicant from UK or Ireland</li>
+            <li>
+                And applying for <strong>full-time undergraduate
+                degree programmes</strong> at our Belfast,
+                Coleraine or Derry/Londonderry campuses.
+            </li>
+        </ul>
+
+        <p>
+            To apply via UCAS, visit:
+            <a href="https://www.ucas.com/"
+               target="_blank"
+               rel="noopener noreferrer">
+                Choose your future | UCAS
+            </a>
+        </p>
+
+        <div class="section-title">
+            Apply through our International Applicant Portal
+            if you are:
+        </div>
+
+        <ul>
+            <li>An international applicant</li>
+            <li>
+                And applying for an undergraduate or postgraduate
+                degree programme, including distance learning
+                programmes, at one of our Northern Ireland campuses.
+            </li>
+        </ul>
+
+        <p>
+            To apply via our International Applicant Portal,
+            visit:
+            <a href="https://www.ulster.ac.uk/"
+               target="_blank"
+               rel="noopener noreferrer">
+                International Applicant Portal
+            </a>
+        </p>
+
+        <div class="help-section">
+
+            <h2>Need Help?</h2>
+
+            <h2>UK and ROI applications:</h2>
+            <p>
+                <a href="mailto:admissions@ulster.ac.uk">
+                    admissions@ulster.ac.uk
+                </a>
+            </p>
+
+            <h2>International applications:</h2>
+            <p>
+                <a href="mailto:internationaladmissions@ulster.ac.uk">
+                    internationaladmissions@ulster.ac.uk
+                </a>
+            </p>
+
+            <h2>Exchange/Study Abroad applications:</h2>
+            <p>
+                <a href="mailto:goglobal@ulster.ac.uk">
+                    goglobal@ulster.ac.uk
+                </a>
+            </p>
+
+            <h2>
+                Short Courses - Postgraduate and Undergraduate
+                Professional Development (Micro-credentials):
+            </h2>
+
+            <p>
+                <a href="mailto:FlexEd@ulster.ac.uk">
+                    FlexEd@ulster.ac.uk
+                </a>
+            </p>
+
+            <p>Thank you,</p>
+
+            <p>Ulster University</p>
+
+        </div>
+
+    </main>
+
+    <!-- NEXT STEP: DEMONSTRATION ONLY -->
+    <section class="next-step" id="nextStep">
+
+        <h2>Continue your application</h2>
+
+        <p>
+            Select the application route that applies to you.
+        </p>
+
+        <label for="applicationRoute">
+            Application route
+        </label>
+
+        <select id="applicationRoute">
+            <option value="">Choose an application route</option>
+            <option value="part-time">
+                Part-time undergraduate
+            </option>
+            <option value="apprenticeship">
+                Degree Apprenticeship
+            </option>
+            <option value="postgraduate">
+                Postgraduate taught
+            </option>
+            <option value="international">
+                International applicant
+            </option>
+            <option value="exchange">
+                Exchange/Study Abroad
+            </option>
+            <option value="short-course">
+                Short Courses / Micro-credentials
+            </option>
+        </select>
+
+        <button onclick="selectRoute()">
+            Confirm route
+        </button>
+
+        <p id="routeMessage" style="margin-top: 20px;"></p>
+
+    </section>
+
+    <!-- FIXED CONTINUE BUTTON -->
+    <footer class="bottom-bar">
+        <button
+            class="continue-button"
+            id="continueButton"
+            onclick="continueApplication()">
+            CONTINUE
+        </button>
+    </footer>
+
+    <script>
+        function continueApplication() {
+            const mainContent =
+                document.getElementById("mainContent");
+
+            const nextStep =
+                document.getElementById("nextStep");
+
+            const continueButton =
+                document.getElementById("continueButton");
+
+            mainContent.style.display = "none";
+            nextStep.style.display = "block";
+
+            continueButton.textContent = "BACK";
+
+            continueButton.onclick = function () {
+                nextStep.style.display = "none";
+                mainContent.style.display = "block";
+
+                continueButton.textContent = "CONTINUE";
+                continueButton.onclick = continueApplication;
+
+                window.scrollTo({
+                    top: 0,
+                    behavior: "smooth"
+                });
+            };
+
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        }
+
+        function selectRoute() {
+            const route =
+                document.getElementById("applicationRoute").value;
+
+            const message =
+                document.getElementById("routeMessage");
+
+            if (!route) {
+                message.textContent =
+                    "Please choose an application route.";
+
+                return;
+            }
+
+            if (route === "international") {
+                message.textContent =
+                    "Please use the official Ulster University " +
+                    "International Applicant Portal to apply.";
+            } else if (
+                route === "part-time" ||
+                route === "apprenticeship" ||
+                route === "postgraduate" ||
+                route === "exchange" ||
+                route === "short-course"
+            ) {
+                message.textContent =
+                    "You selected your application route. " +
+                    "Connect this selection to the appropriate " +
+                    "application form to continue.";
+            }
+        }
+    </script>
+
+</body>
+</html>
